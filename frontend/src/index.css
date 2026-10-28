@@ -1,0 +1,33 @@
+/* Estilos mínimos: Bootstrap hace casi todo el trabajo. */
+body {
+  background-color: #f8f9fa;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+}
+
+/* Panel de saldo fijo bajo el Navbar mientras se navega por el menú. */
+.panel-saldo {
+  position: sticky;
+  top: 0;
+  z-index: 1010;
+}
+
+/* La bandeja acompaña el scroll en pantallas medianas o más grandes. */
+@media (min-width: 992px) {
+  .bandeja-sticky {
+    position: sticky;
+    top: 6rem;
+  }
+}
+
+.temporizador {
+  font-variant-numeric: tabular-nums;
+}
