@@ -28,6 +28,7 @@ export const liberarReserva = () => {
   });
   reserva.itemsReservados = [];
   reserva.expiraEn = null;
+  reserva.expirada = true;
 };
 
 // Revisa si el tiempo terminó. Si es así, libera la reserva y devuelve true.
@@ -51,7 +52,7 @@ export const estadoReserva = (expirada = false) => {
     itemsReservados: reserva.itemsReservados.map((item) => ({ id: item.id, cantidad: item.cantidad })),
     total,
     segundosRestantes: calcularSegundosRestantes(),
-    expirada,
+    expirada: expirada || reserva.expirada,
   };
 };
 

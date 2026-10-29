@@ -10,4 +10,5 @@ export const menu = [
   { id: 302, nombre: 'Brownie con Helado', precio: 2.75, stock: 5, categoria: 'Postre' },
   { id: 401, nombre: 'Limonada Natural', precio: 1.5, stock: 15, categoria: 'Bebida' },
   { id: 402, nombre: 'Café Americano', precio: 1.25, stock: 20, categoria: 'Bebida' },
+  { id: 402, nombre: 'Café Americano', precio: 1.25, stock: 20, categoria: 'B' },
 ];

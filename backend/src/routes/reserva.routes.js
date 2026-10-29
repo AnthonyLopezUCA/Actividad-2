@@ -2,6 +2,7 @@
 import { Router } from 'express';
 import {
   obtenerReserva,
+  iniciarNuevaReserva,
   agregarPlato,
   actualizarPorciones,
   eliminarPlato,
@@ -11,6 +12,7 @@ import {
 const router = Router();
 
 router.get('/', obtenerReserva);
+router.post('/nueva', iniciarNuevaReserva);
 router.post('/agregar', agregarPlato);
 router.put('/actualizar-porciones/:id', actualizarPorciones);
 router.delete('/eliminar/:id', eliminarPlato);

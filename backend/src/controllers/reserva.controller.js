@@ -33,6 +33,12 @@ export const obtenerReserva = (req, res) => {
   res.json(estadoReserva(expirada));
 };
 
+// Inicia una nueva reserva y elimina el aviso de expiración anterior.
+export const iniciarNuevaReserva = (req, res) => {
+  reserva.expirada = false;
+  res.json(estadoReserva());
+};
+
 // 3. POST /api/reserva/agregar → body { alimentoId, cantidad }
 export const agregarPlato = (req, res) => {
   if (responderSiExpiro(res)) return;

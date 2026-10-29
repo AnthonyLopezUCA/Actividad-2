@@ -80,9 +80,15 @@ function App() {
   const handleConfirmar = () => ejecutarAccion(() => api.confirmarReserva());
 
   const handleNuevaReserva = async () => {
-    setMostrarExpirada(false);
     setExito('');
-    await cargarDatos();
+    try {
+      const datos = await api.iniciarNuevaReserva();
+      aplicarReserva(datos);
+      setMostrarExpirada(false);
+      setMenu(await api.obtenerMenu());
+    } catch (err) {
+      mostrarError(err.message);
+    }
   };
 
   // Carga inicial al montar el componente.

@@ -38,6 +38,8 @@ export const obtenerMenu = () => solicitar('/api/menu');
 
 export const obtenerReserva = () => solicitar('/api/reserva');
 
+export const iniciarNuevaReserva = () => solicitar('/api/reserva/nueva', { method: 'POST' });
+
 export const agregarPlato = (alimentoId, cantidad = 1) =>
   solicitar('/api/reserva/agregar', {
     method: 'POST',
